@@ -10,10 +10,8 @@ Get Plus JSON
     [Arguments]    ${num1}    ${num2}
     ${resp}=     GET    ${BASE_URL}/plus/${num1}/${num2}
 
-    # Verify the status code is 200 (OK)
     Should Be Equal    ${resp.status_code}    ${200}
 
-    # Get the response content as a JSON object
     [return]    ${resp.json()}
 
 *** Test Cases ***
